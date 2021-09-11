@@ -6,7 +6,7 @@ Simple Porkbun Dynamic DNS implementation
 
 Install to your system packages
 
-```python -m pip install git+https://github.com/pmdevita/pbdyndns```
+```python3 -m pip install git+https://github.com/pmdevita/pbdyndns```
 
 Create a config file at `/etc/pbdyndns.conf`
 
@@ -25,5 +25,5 @@ to update and grab it's `id` property.
 
 Finally, make a cron job, you probably need to run "which" for python
 
-```21 */2 * * * python -m pbdyndns -c /etc/pbdyndns.conf```
+```21 */2 * * * python3 -m pbdyndns -c /etc/pbdyndns.conf```
 
