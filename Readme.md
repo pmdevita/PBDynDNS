@@ -23,7 +23,7 @@ You can find the ID from the Porkbun website by inspecting the network requests 
 DNS Records in the interface. In the given JSON, look under `dnsRecords` for the record that matches the one you want 
 to update and grab it's `id` property.
 
-Finally, make a cron job, you probably need to run "which" for python
+Finally, make a cron job, you might need to use the full path to Python depending on your cron environment
 
 ```21 */2 * * * python3 -m pbdyndns -c /etc/pbdyndns.conf```
 
