@@ -25,7 +25,7 @@ def json_request(url, data):
 
 
 def get_current_ip(api_key, secret_api_key):
-    req = json_request("https://porkbun.com/api/json/v3/ping", {"secretapikey": secret_api_key, "apikey": api_key})
+    req = json_request("https://api.porkbun.com/api/json/v3/ping", {"secretapikey": secret_api_key, "apikey": api_key})
     with urllib.request.urlopen(req) as r:
         data = json.loads(r.read().decode())
         return data["yourIp"]
@@ -39,7 +39,7 @@ def edit_record(api_key, secret_api_key, domain, id, content, subdomain="", type
         "type": type,
         "content": content
     }
-    req = json_request(f"https://porkbun.com/api/json/v3/dns/edit/{domain}/{id}", data)
+    req = json_request(f"https://api.porkbun.com/api/json/v3/dns/edit/{domain}/{id}", data)
     r = urllib.request.urlopen(req)
     r.close()
 
