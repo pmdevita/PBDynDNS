@@ -44,3 +44,14 @@ def edit_record(api_key, secret_api_key, domain, id, content, subdomain="", type
     r.close()
 
 
+import argparse
+
+parser = argparse.ArgumentParser(description="Update a Porkbun domain with a new IP")
+parser.add_argument("--config", "-c", help="Path to configuration file")
+
+
+def __main__():
+    args = parser.parse_args()
+    if args.config:
+        execute_config(args.config)
+
